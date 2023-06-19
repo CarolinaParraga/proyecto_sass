@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floristeria</title>
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+  </head>
+  <body>
+  <!-- Header con el logo y el título de la web -->
+  <header>
+    <a href="index.html">MYFLOWER</a>
+    <nav id="mobile">
+      <div>
+        <span class="material-symbols-outlined icon-menu">
+          menu
+          </span>
+          <ul>
+              <li class="categoria">
+                <a href="ramos.html">Ramos</a>
+              </li>
+              <li class="categoria">
+                <a href="plantas.html">Plantas</a>
+              </li>
+              <li class="categoria">
+                <a href="cestas.html">Cestas</a>
+              </li>
+              <li class="categoria">
+                <a href="ocasion.html">Ocasión</a>
+              </li>
+              <li class="categoria">
+                <a href="pedido.html">Pedido</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</header>
+<!-- Barra de navegación -->
+<nav>
+    <ul>
+        <li class="categoria">
+            <a href="#">Productos</a>
+            <ul class="submenu">
+                <li><a href="ramos.html">Ramos</a></li>
+                <li><a href="plantas.html">Plantas</a></li>
+                <li><a href="cestas.html">Cestas</a></li>
+            </ul>
+        </li>
+        <li class="categoria">
+            <a href="ocasion.html">Ocasión</a>
+        </li>
+        <li class="categoria">
+            <a href="pedido.html">Pedido</a>
+        </li>
+        <li class="search-icon">
+          <input type="search" placeholder="Search">
+          <label class="icon">
+            <span class="material-symbols-outlined">
+              search
+              </span>
+          </label>
+        </li>
+        
+    
+    </ul>
+</nav>
+<main>
+
+    <div class="container-detalle">
+        <div class="columna1">
+            <img class="img-detalle" src="img/ramos/ramo3.png">
+          </div>
+        <div class="columna2">
+          <h2>Flor Variada</h2>
+          <p>
+            <strong>Precio: </strong> 19€
+          </p>
+          <p> <strong>Detalle: </strong>Ramo confeccionado con gerberas, liliums, margaritas y verdes. Perfecto para dar alegría todos los días y para todas las ocasiones. Envuelto con papel de diseño y lazo para su perfecta presentación. Entregas de flores a domicilio en Alicante es Gratis.</p>
+          <p>
+            <label>Cantidad</label>
+            <select name="cantidad">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <a href="pedido.html" class="button agregar-carrito" data-id="1">Comprar</a>
+          </p>
+          
+        </div>
+        <div class="columna3">
+            <h2>Valoraciones</h2>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star">Anónimo</i>
+          </div>
+            <p>Todo perfecto, la presentación, el envío en tiempo, la tarjeta. Es siempre un placer comprar en Myflower.</p>
+            
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star">Carmen</i>
+          </div>
+            <p>En la foto y la descripción ponía unos artículos de flores y no tendrían ese en concreto y no lo sustituyeron por otro ni avisan del cambio.
+                Por el resto genial</p>
+          
+        </div>
+    </div>
+    </main>
+</main>
+<footer class="footer-section">
+    <div class="copyright-area">
+        <div class="container-footer">
+            <div class="row-footer">
+              <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                <div class="copyright-text">
+                    <p>Copyright &copy; 2022, todos los derechos reservados <a href="index.html">MYFLOWER</a></p>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                  <div class="footer-menu">
+                      <ul>
+                          <li><a href="aviso.html">Aviso Legal</a></li>
+                          
+                          <li><a href="contacto.html">Contacto</a></li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </footer>   
+</body>
+</html>

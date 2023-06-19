@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floristeria</title>
+    <link href="css/screen.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+  </head>
+  <body>
+  <!-- Header con el logo y el título de la web -->
+  <header>
+    <a href="index.html">MYFLOWER</a>
+    <nav id="mobile">
+        <div>
+          <span class="material-symbols-outlined icon-menu">
+            menu
+            </span>
+            <ul>
+                <li class="categoria">
+                  <a href="ramos.html">Ramos</a>
+                </li>
+                <li class="categoria">
+                  <a href="plantas.html">Plantas</a>
+                </li>
+                <li class="categoria">
+                  <a href="cestas.html">Cestas</a>
+                </li>
+                <li class="categoria">
+                  <a href="ocasion.html">Ocasión</a>
+                </li>
+                <li class="categoria">
+                  <a href="pedido.html">Pedido</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Barra de navegación -->
+<nav>
+    <ul>
+        <li class="categoria">
+            <a href="#">Productos</a>
+            <ul class="submenu">
+                <li><a href="ramos.html">Ramos</a></li>
+                <li><a href="plantas.html">Plantas</a></li>
+                <li><a href="cestas.html">Cestas</a></li>
+            </ul>
+        </li>
+        <li class="categoria">
+            <a href="ocasion.html">Ocasión</a>
+        </li>
+        <li class="categoria">
+            <a href="pedido.html">Pedido</a>
+        </li>
+        <li class="search-icon">
+          <input type="search" placeholder="Search">
+          <label class="icon">
+            <span class="material-symbols-outlined">
+              search
+              </span>
+          </label>
+        </li>
+        
+    
+    </ul>
+</nav>
+<div class="container-pedido">
+    
+    <div class="columna1">
+        <div class="table">
+            <div class="thead">
+                <div class="td">Producto</div>
+                <div class="td">Descripción</div>
+                <div class="td">Precio</div>
+                <div class="td">Cantidad</div>
+            </div>
+            <div class="tr">
+                <div class="td"><img src="img/ramos/ramo1.png" alt=""></div>
+                <div class="td td-3">Ramo variado</div>
+                <div class="td td-1">1</div>
+                <div class="td td-2">30€</div>
+                
+            </div>
+            <div class="tr">
+                <div class="td"><img src="img/ramos/ramo2.png" alt=""></div>
+                <div class="td td-3">Ramo variado</div>
+                <div class="td td-1">1</div>
+                <div class="td td-2">35€</div>
+                
+            </div>
+            <div class="tr">
+                <div class="td td-total">Total Pedido</div>
+                <div class="td"></div>
+                <div class="td">2</div>
+                <div class="td">
+                    <p>Subtotal: 65€</p>
+                    <p>Iva: 21%</p>
+                    <p> <strong>Total: 42,35€</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columna2">
+        <form action="#" id="form" method="POST">
+            <h2>PEDIDO</h2>
+            <br>
+            <input type="text" name="cliente" id="nombre" placeholder="Escriba su Nombre"required>
+            <input type="text" name="email" id="email" placeholder="Escriba su Email" required>
+            <input type="text" name="telefono" id="telefono" placeholder="Escriba su Teléfono de contacto"required>
+            <input type="text" name="telefono" id="telefono" placeholder="Escriba su número de cuenta"required>
+            <input type="text" name="telefono" id="telefono" placeholder="Escriba su dirección"required>
+            <label>Lugar de recogida</label>
+            <select name="recogida">
+                <option value="1">Tienda</option>
+                <option value="2">Domicilio</option>
+            </select>
+            <input type="submit" id="button-contacto" value="CONFIRMAR PEDIDO" class="button">
+          </form>
+    </div>
+</div>
+
+
+<footer class="footer-section">
+    <div class="copyright-area">
+        <div class="container-footer">
+            <div class="row-footer">
+              <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                <div class="copyright-text">
+                    <p>Copyright &copy; 2022, todos los derechos reservados <a href="index.html">MYFLOWER</a></p>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                  <div class="footer-menu">
+                      <ul>
+                          <li><a href="aviso.html">Aviso Legal</a></li>
+                          
+                          <li><a href="contacto.html">Contacto</a></li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </footer>   
+</body>
+</html>

@@ -1,0 +1,71 @@
+@import '_mixin.scss';
+.footer-menu {
+	ul {
+		margin: 0px;
+		padding: 0px;
+	}
+	li {
+		display: inline-block;
+		margin-left: 20px;
+		&:hover {
+			a {
+				color: $button-fondo;
+			}
+		}
+		a {
+			font-size: 14px;
+			color: $color-fondo;
+			text-decoration: none;
+		}
+	}
+}
+.container-footer {
+	max-width: 1140px;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.copyright-area {
+	background: $border-table;
+	padding: 25px 0;
+}
+.copyright-text {
+	p {
+		margin: 0;
+		font-size: 14px;
+		color: $color-fondo;
+		a {
+			color: $button-fondo;
+			text-decoration: none;
+		}
+	}
+}
+.row-footer {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.text-lg-left {
+	text-align: left !important;
+}
+.text-right {
+	text-align: right !important;
+}
+.col-xl-6 {
+	flex: 0 0 50%;
+	max-width: 50%;
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.d-lg-block {
+	display: block !important;
+}
+*, ::after, ::before {
+	@include box-sizing(border-box);
+}

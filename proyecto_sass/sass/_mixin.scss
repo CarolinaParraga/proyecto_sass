@@ -1,0 +1,100 @@
+/*funciones sass*/
+$color-texto:#eee;
+$color-texto-hover: lighten($color-texto, 10%);
+$color-fondo:  #666;
+$color-fondo-hover:lighten($color-fondo, 10%);
+$color-titulo: darken($color-fondo, 10%);
+
+$button-fondo: #DF691A;
+$button-texto: #f2f2f2;
+$button-fondo-hover: #9a4912;
+$button-texto-hover: #e1e0e0;
+
+$stars: rgb(255, 221, 0);
+$search:rgb(247, 247, 153);
+$icon-search: #cccccc;
+$form-fondo:  rgba(0,0,0,0.4);
+$box-snadow:rgba(0,0,0,0.2);
+$card-fondo: rgb(201, 143, 143);
+$border-table: #000;
+
+
+
+$small: 772px;
+$medium: 1024px;
+$mobile: 600px;
+
+
+@mixin logo($nombre, $from, $to) {
+  @keyframes #{$nombre} {
+    0% {transform: translateX($from)}
+    100% {transform: translateX($to)}
+  }
+}
+/*mixin e interpolaciones*/
+@mixin background-image($nombre, $with, $height, $attachment, $margin, $paddingx, $paddingy){
+  .container-#{$nombre}{
+	  background-size: #{$with} #{$height};
+	  background-attachment: #{$attachment};
+	  background-image: url('../img/#{$nombre}.png');
+    margin: #{$margin};
+	  padding: #{$paddingx} #{$paddingy};  
+  }
+}
+ 
+
+
+
+
+@mixin color($color, $background) {
+    color: $color;
+    background-color: $background;
+  }
+
+@mixin color-hover($color, $background) {
+    color: $color;
+    background-color: $background;
+}
+
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; 
+       -moz-box-sizing: $box-model; 
+            box-sizing: $box-model;
+  }
+
+@mixin transition($property, $duration, $timing: linear ) {
+    -webkit-transition: $property, $duration, $timing; 
+       -moz-transition: $property, $duration, $timing; 
+            transition: $property, $duration, $timing;
+}
+
+@mixin transition2($property, $duration, $timing: ease-out ) {
+  -webkit-transition: $property, $duration, $timing; 
+     -moz-transition: $property, $duration, $timing; 
+          transition: $property, $duration, $timing;
+}
+
+@mixin animation($name, $duration, $timing: linear) {
+    -webkit-animation: $name, $duration, $timing; 
+       -moz-animation: $name, $duration, $timing; 
+            animation: $name, $duration, $timing;
+}
+
+
+@mixin xsmall {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+/*directiva if*/
+@mixin responsive($size){
+    @if $size == mobile {
+        @media only screen and (max-width: $mobile) { @content; }
+      }
+      @if $size == smallDesktop {
+        @media only screen and (max-width: $small) { @content; }
+      }
+      @if $size == mediumDesktop {
+        @media only screen and (max-width: $medium) { @content; }
+}
+}

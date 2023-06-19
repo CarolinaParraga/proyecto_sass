@@ -1,0 +1,365 @@
+@import '_mixin.scss';
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    30%{margin-left:0;}
+
+    35%{margin-left: -100%;}
+    65%{margin-left: -100%;}
+
+    70%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
+
+
+main {
+	padding-top: 6rem;
+}
+.slider {
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	ul {
+		display: flex;
+		padding: 0;
+		width: 300%;
+		animation: cambio 20s infinite;
+		animation-direction: alternate;
+		animation-timing-function: linear;
+	}
+	li {
+		list-style: none;
+		width: 100%;
+	}
+	img {
+		width: 100%;
+	}
+}
+/*placeholder y exted*/
+%container{
+    display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+}
+%columna{
+    text-align: left;
+}
+.container-index {
+    @extend %container;
+    justify-content: space-between;
+
+	.columna1 {
+		flex: 80%;
+		padding: 30px;
+		@extend %columna;
+		p {
+			padding-top: 70px;
+		}
+		img {
+			width: 450px;
+			float: right;
+			border-radius: 80px;
+		}
+	}
+}
+aside {
+	flex: 20%;
+	padding: 30px;
+	background-color: $color-texto;
+	h2 {
+		padding-bottom: 20px;
+	}
+}
+@include background-image('contacto', '100%', '100%', 'fixed', '0', '6rem', '0');
+.container-contacto {
+	
+	form {
+		width: 450px;
+		margin: auto;
+		background:$form-fondo;
+		padding: 10px 20px;
+		box-sizing: border-box;
+		margin-top: 20px;
+		border-radius: 7px;
+		h2 {
+			color: $button-texto;
+			text-align: center;
+			margin: 0;
+			font-size: 30px;
+			margin-bottom: 20px;
+			font-weight: 600;
+		}
+		textarea {
+			min-height: 100px;
+			max-height: 200px;
+			max-width: 100%;
+		}
+	}
+}
+.container-contacto form input,textarea {
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 7px;
+	box-sizing: border-box;
+	font-size: 17px;
+	border: none;
+}
+.container-productos {
+	@extend %container;
+	justify-content: center;
+	margin: auto;
+    max-width: 1200px;
+	.card {
+		width: 260px;
+		height: 390px;
+		background: $card-fondo;
+		color: $button-texto;
+		border-radius: 8px;
+		border: 1px solid $button-fondo;
+		box-shadow: 0 2px 2px $box-snadow;
+		overflow: hidden;
+		margin: 20px;
+		text-align: center;
+		align-items: center;
+		transition: all 0.25s;
+		&:hover {
+			transform: translateY(-15px);
+			box-shadow: 0 12px 16px  $box-snadow;
+			.card-ocasion {
+				transform: scale(1.2);
+			}
+		}
+		img {
+			width: 260px;
+			height: 190px;
+			cursor: pointer;
+		}
+		h4 {
+			font-weight: 600;
+			padding: 5px;
+			a {
+				text-decoration: none;
+				font-weight: 600;
+				padding: 5px;
+				background: $card-fondo;
+				color: $button-texto;
+			}
+		}
+		p {
+			padding-top: 5px;
+		}
+		a {
+			padding: 10px;
+			display: block;
+			width: 50%;
+			margin: 0 auto;
+			background-color: $button-fondo;
+		}
+		button {
+			padding: 10px;
+			display: block;
+			width: 50%;
+			margin: 0 auto;
+			color: white;
+			background-color: $button-fondo;
+		}
+	}
+}
+/*ventana modal*/
+dialog {
+	max-width: 650px;
+	padding: 40px 70px;
+	border: 8px solid $color-fondo;
+	background-color: $color-texto;
+	p {
+		color: $color-fondo;
+	}
+	button {
+		box-shadow: 0px 0px 0 $color-fondo;
+		&:hover {
+			box-shadow: 8px 8px 0 $color-fondo;
+		}
+	}
+}
+.container-blog {
+    @extend %container;
+	justify-content: space-between;
+	.columna1 {
+		flex: 40%;
+		padding: 30px;
+		@extend %columna;
+		p {
+			padding-top: 70px;
+		}
+	}
+	.columna2 {
+		img {
+			flex: 10%;
+			padding: 30px;
+			float: right;
+			border-radius: 80px;
+		}
+	}
+}
+.container-detalle {
+	@extend %container;
+	justify-content: space-between;
+	.columna2 {
+		flex: 40%;
+		padding: 0px 100px 0px 30px;
+		@extend %columna;
+		float: right;
+		p {
+			padding-top: 30px;
+			a {
+				margin-left: 30px;
+			}
+			select {
+				width: 10%;
+			}
+		}
+	}
+	.columna1 {
+		flex: 10%;
+		padding: 50px 30px 0px 100px;
+		img {
+			@include responsive(mobile){
+				width: 200px}
+			width: 450px;
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.2);
+			}
+		}
+	}
+	.columna3 {
+		@include responsive(mobile){
+			padding: 30px;}
+		padding: 10px 100px 50px 100px;
+		h2 {
+			padding-bottom: 20px;
+		}
+	}
+}
+.container-aviso {
+    @extend %container;
+	justify-content: space-between;
+	.columna1 {
+		@include responsive(mobile){
+			padding: 20px;
+		}
+		padding: 30px 120px;
+		@extend %columna;
+
+		ul {
+			margin-left: 0;
+			padding-left: 1em;
+		}
+	}
+}
+.container-aviso .columna1 p, h2 {
+	padding-top: 50px;
+}
+
+.container-pedido {
+    @extend %container;
+	justify-content: space-between;
+	.columna1 {
+		flex: 40%;
+		padding: 0px 100px 0px 100px;
+		@extend %columna;
+		float: right;
+		@include responsive(mobile){
+			padding: 0px}
+	}
+	.columna2 {
+		flex: 40%;
+		padding: 60px 100px 0px 100px;
+		@extend %columna;
+		float: right;
+		form {
+			width: 450px;
+			margin: auto;
+			background:$form-fondo;
+			padding: 5px 20px;
+			box-sizing: border-box;
+			margin-top: 20px;
+			border-radius: 7px;
+			h2 {
+				color: $button-texto;
+				text-align: center;
+				margin: 0;
+				font-size: 30px;
+				margin-bottom: 10px;
+				font-weight: 600;
+			}
+			textarea {
+				min-height: 100px;
+				max-height: 200px;
+				max-width: 100%;
+			}
+			label {
+				color: $button-texto;
+			}
+		}
+	}
+}
+
+.table {
+	display: table;
+	table-layout: fixed;
+}
+.thead {
+	display: table-header-group;
+	font-weight: bold;
+}
+.tr {
+	display: table-row;
+}
+.td {
+	@include responsive(mobile){
+		padding: 0px}
+	display: table-cell;
+	height: 150px;
+	border-bottom: 1px solid $border-table;
+	text-align: center;
+	vertical-align: middle;
+	padding: 20px;
+	img {
+		width: 100px;
+	}
+}
+/*Uso de funciones, con sentencias for, while*/
+@for $i from 1 through 3 {
+    .td-#{$i} { width: 0 + ($i*100); }
+  }
+.td-3 {
+	width: 300px;
+}
+.td-1 {
+	width: 100px;
+}
+.td-2 {
+	width: 200px;
+}
+.td-total {
+	font-weight: bold;
+}
+.container-pedido .columna2 form input,textarea, select {
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 7px;
+	box-sizing: border-box;
+	font-size: 17px;
+	border: none;
+}
+@media only screen and (max-width: 600px) {
+  .container-pedido .columna2{
+    padding: 0px } 
+  }
+
+
+
+
+
